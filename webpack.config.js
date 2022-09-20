@@ -71,12 +71,12 @@ module.exports = {
     }) 
     
   ] ,
-  optimization :{
-    minimizer: [new UglifyJsPlugin({
-      test: /\.js(\?.*)?$/i ,
-      cache:true
-    })]
-  }
+  // optimization :{
+  //   minimizer: [new UglifyJsPlugin({
+  //     test: /\.js(\?.*)?$/i ,
+  //     cache:true
+  //   })]
+  // }
 
 };
 
