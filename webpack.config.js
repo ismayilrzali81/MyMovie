@@ -3,8 +3,7 @@
 const path = require('path'),
 HtmlWebpackPlugin = require('html-webpack-plugin'),
 HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin') ,
-MiniCssExtractPlugin = require("mini-css-extract-plugin") ,
-UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+MiniCssExtractPlugin = require("mini-css-extract-plugin") 
 
 module.exports = {
   resolve: {
