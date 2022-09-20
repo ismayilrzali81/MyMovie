@@ -1,0 +1,40 @@
+section.exclusive_videos {
+    padding-top: 70px;
+    .movie_list {
+        &_item {
+            width: 450px;
+            margin-right: 48px;
+            .photo_wrapper {
+               img {
+                width: 250px;
+                height: 370px;
+               }
+            }
+
+            // &:nth-child(1) {
+            //     .photo_wrapper {
+            //         img {
+            //             content: url('../img/Thumbnails.jpg');
+            //         }
+            //     }
+            // }
+
+            // &:nth-child(2) {
+            //     .photo_wrapper {
+            //         img {
+            //             content: url('../img/video_2.jpg');
+            //         }
+            //     }
+            // }
+
+            // &:nth-child(3) {
+            //     .photo_wrapper {
+            //         img {
+            //             content: url('../img/video_2.jpg');
+            //         }
+            //     }
+            // }
+        }
+
+    }
+}

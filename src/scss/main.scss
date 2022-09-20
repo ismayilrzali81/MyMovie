@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=block');
+// @import url('src/scss/lazyframe');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+
+
+
+.container {
+    padding: 0 102px 0 98px;
+}
+@import './animated_bg';
+@import './score';
+@import './movie_list';
+@import './header.scss';
+@import './featured_movie';
+@import './new_arrival';
+@import './exclusive_videos';
+@import './featured_casts';
+@import './footer';
+@import './most_popular';
+@import './video_wrapper';
+@import './reg_wrapper';
+@import './movie_wrapper';
+@import './search_info';
+@import './see_more';
+
+
+.left_btn {
+    cursor: pointer;
+    position: absolute;
+    content: url('../icon/left_btn.svg') ;
+    left: 34px;
+    top: 50%;
+}
+.right_btn {
+    cursor: pointer;
+    position: absolute;
+    content: url('../icon/right_btn.svg') ;
+    right: 34px;
+    top: 50%;
+}

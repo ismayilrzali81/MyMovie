@@ -1,0 +1,198 @@
+@mixin name {
+    margin-top: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1B1D1C;
+}
+
+@mixin role {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #1B1D1C;   
+}
+.about_movie {
+    transform: scale(0);
+    opacity: 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: .8s all;
+
+    .movie_wrapper {
+        display: flex;
+        position: absolute;
+        justify-content: space-evenly;
+        padding: 71px 0;
+        transition: .8s all;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        .photo_wrapper {
+            img {
+                border-radius: 10px 10px 0px 0px;
+                width: 348px;
+                height: 480px;
+            }
+        }
+        .info_wrapper {
+            width: 50%;
+        }
+        .header {
+            font-weight: 700;
+            font-size: 67.77px;
+            line-height: 90px;
+            color: #1B1D1C;
+        }
+        .tags {
+            width: 90%;
+            margin-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .tag {
+                padding: 8px;
+                background: #EFE8D8;
+                border-radius: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #1B1D1C;
+                &:last-child {
+                    cursor: pointer;
+                    color: #E54B4B;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items:center;
+                    &::before {
+                        content:url('../icon/Shape.svg');
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    
+        .ratings_imdb {
+            margin-top: 22px;
+            display: flex;
+            align-items:center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1B1D1C;
+            span {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &::before {
+                margin-right: 16px;
+                content: url('../icon/imdb-icon.svg');
+            }
+        }
+        .text_header {
+            margin-top: 22px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #1B1D1C;
+        }
+        .text {
+            margin-top: 6px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1B1D1C;
+        }
+    
+        .director_writer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 22px;
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .name {
+                    @include name;
+                }
+                .role {
+                    @include role;
+                }
+            }
+        }
+        .line {
+            margin-top: 22px;
+            width: 100%;
+            border: 1px solid #D9D7C6;
+        }
+        .actors {
+            margin-top: 23px;
+            justify-content: space-between;
+            position: relative;
+            padding: 0px 30px;
+            .left_btn , .right_btn {
+                transform: translateY(-50%);
+            }
+            .left_btn {
+                left: 0;
+            }
+            .right_btn {
+                right: 0;
+            }
+
+            .actors_list {
+            overflow: hidden;
+            }
+            .actors_wrapper {
+                display: flex;
+                transition: .6s all;
+            }
+            .actor {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 30px;
+                &_photo {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 100%;
+                    background-color: #E54B4B;
+                    border: 2px solid #EFE8D8;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 100%;
+                    }
+                }
+                &_name {
+                    @include name;
+                }
+                &_character {
+                    @include role;
+                }
+            }
+        }
+        .ext_btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+    }
+    &_active {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

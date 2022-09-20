@@ -1,0 +1,76 @@
+.search_info {
+    padding: 0;
+    opacity: 0;
+    height: 280px;
+    width: 100%;
+    overflow-y: auto;
+    background-color: white;
+    pointer-events: auto;
+    border-radius: 8px;
+
+    .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+    }
+
+    .movie_list_item {
+        padding: 10px;
+        display: flex;
+        cursor: pointer;
+        .photo_wrapper {
+            width: auto;
+            height: auto;
+            img {
+                width: 180px;
+                height: 260px;
+                border-radius: 8px;
+            }
+        }
+       
+        .movie_info {
+            margin-top: 8px;
+            margin-left: 15px;
+            .movie_title  {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 23px;
+                color: #111827;
+            }
+            .year {
+                margin-top: 6px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                color: #111827;
+            }
+            .type {
+                margin-top: 6px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                  color: #111827;
+            }
+            .imdb_score {
+                display: flex;
+                margin-top: 6px;
+                align-items: center;
+
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                color: #111827;
+                .imdb {
+                    margin-right: 10px;
+                }
+                img {
+                  content: url(http://localhost:9000/7789256c058ff82a6baf.svg)
+                }
+            }
+        }
+    }
+  
+}
+
+

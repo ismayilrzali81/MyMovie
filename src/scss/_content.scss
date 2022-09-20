@@ -1,0 +1,34 @@
+.title {
+    color: #FFFFFF;
+
+    &_fz24 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &_fz38 {
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    &_fz18 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.contents {
+    &_btn {
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &_question {
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 16px; 
+    }
+}

@@ -1,0 +1,29 @@
+.score {
+    margin-top: 16px;
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+    .imdb_score {
+        margin-right: 34px;
+        img.imdb {
+            width: 35px;
+            height: 17px;
+            content: url('../icon/imdb.svg');
+            margin-right: 10px;
+        }
+    }
+    .like_score {
+        img.like {
+            content: url('../icon/like.svg');
+            margin-right: 10px;
+        }
+    }
+
+    .imdb_score , .like_score {
+        display: flex;
+        align-items: center;
+    }
+}
