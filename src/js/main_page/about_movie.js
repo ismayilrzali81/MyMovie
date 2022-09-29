@@ -7,7 +7,7 @@ export const getMoviesInfo = (target , about_movie) => {
 
          axios.get(`http://www.omdbapi.com/?apikey=8d9cfe3d&i=${id}`).then( async res => {
 
-            let actors_res = await axios.get(`https://imdb-api.com/en/API/FullCast/k_uy3lv974/${id}`)
+            let actors_res = await axios.get(`https://imdb-api.com/en/API/FullCast/k_7xs694cx/${id}`)
 
                    let actors_lists =  actors_res.data.actors.map(item => {
                          return `<div class="actor">

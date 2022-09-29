@@ -16,7 +16,9 @@ body {
 
 .container {
     padding: 0 102px 0 98px;
+    overflow: hidden
 }
+
 @import './animated_bg';
 @import './score';
 @import './movie_list';
@@ -32,9 +34,12 @@ body {
 @import './movie_wrapper';
 @import './search_info';
 @import './see_more';
+@import './media_querry';
+
 
 
 .left_btn {
+    z-index: 3;
     cursor: pointer;
     position: absolute;
     content: url('../icon/left_btn.svg') ;
@@ -42,6 +47,7 @@ body {
     top: 50%;
 }
 .right_btn {
+    z-index: 3;
     cursor: pointer;
     position: absolute;
     content: url('../icon/right_btn.svg') ;

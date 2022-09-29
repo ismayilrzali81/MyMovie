@@ -5,9 +5,31 @@ section.exclusive_videos {
             width: 450px;
             margin-right: 48px;
             .photo_wrapper {
+                &::after {
+                    content: url('../icon//play_exclusive.svg');
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50% , -50%);
+                    width: 60px;
+                    height: 60px;
+
+                }
                img {
-                width: 250px;
-                height: 370px;
+                position: relative;
+                width: 450px;
+                height: 250px;
+                transition: .6s ease-in;
+                // &::after {
+                //     content: url('../icon//play_exclusive.svg');
+                //     position: absolute;
+                //     left: 50%;
+                //     top: 50%;
+                //     transform: translate(-50% , -50%);
+                //     width: 60px;
+                //     height: 60px;
+
+                // }
                }
             }
 

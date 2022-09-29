@@ -124,8 +124,8 @@ function users_sign_up() {
     })
 
     onAuthStateChanged(auth, (user) => {
-        let name = document.querySelector('.nav_item .name') ,
-        sign_in_btn = document.querySelector('.nav_item .sign_in_btn') ,
+        let name = document.querySelector('.menu .name') ,
+        sign_in_btn = document.querySelector('.menu .sign_in_btn') ,
         menu_list = document.querySelector('.menu ul')
         
         if (user) {

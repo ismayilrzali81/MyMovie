@@ -4,6 +4,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #1B1D1C;
+    text-align: center;
 }
 
 @mixin role {
@@ -15,6 +16,7 @@
     color: #1B1D1C;   
 }
 .about_movie {
+    z-index: 5;
     transform: scale(0);
     opacity: 0;
     position: fixed; 
@@ -35,6 +37,7 @@
         width: 100%;
         height: 100%;
         background: white;
+        overflow-y: auto;
         .photo_wrapper {
             img {
                 border-radius: 10px 10px 0px 0px;
@@ -52,11 +55,12 @@
             color: #1B1D1C;
         }
         .tags {
-            width: 90%;
+            width: 100%;
             margin-top: 22px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+            flex-wrap: wrap;
             .tag {
                 padding: 8px;
                 background: #EFE8D8;
@@ -117,6 +121,7 @@
             display: flex;
             justify-content: space-around;
             margin-top: 22px;
+            flex-wrap: wrap;
             .item {
                 display: flex;
                 flex-direction: column;

@@ -8,6 +8,12 @@
     z-index: 7;
     transform: translateY(100%);
     opacity: 0;
+    background-color: #be123c;
+
+
+    .wave:nth-child(1) ,    .wave:nth-child(3) {
+        background-color: #be123c;
+    }   
     
 
 
@@ -217,7 +223,7 @@
 
         .ext_btn {
             position: absolute;
-            top: -16px;
+            top: 0px;
             right: -30px;
             cursor: pointer;
         }

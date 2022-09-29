@@ -4,7 +4,8 @@ export const header = () => {
     let auth = getAuth()
     const movie_toggle = document.querySelectorAll('.movie_toggle li') ,
     menu_btn = document.querySelector('.menu_btn') ,
-    menu = document.querySelector('.menu') ,
+    menu = document.querySelector('.menu') , 
+    ext_btn_menu = menu.querySelector('.ext_btn') ,
     video_wrapper =  document.querySelector('.video_wrapper')
 
     movie_toggle.forEach((item) => {
@@ -24,7 +25,12 @@ export const header = () => {
         let target = e.target
         if(target.classList.contains('log_out')) {
             auth.signOut();
+            menu.classList.toggle('menu_active');
         }
+    })
+
+    ext_btn_menu.addEventListener('click' , () => {
+        menu.classList.toggle('menu_active');
     })
 
     document.querySelector('body').addEventListener('click' , (e) => {

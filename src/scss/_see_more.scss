@@ -11,6 +11,7 @@
     background: white;
     overflow-y: auto;
     pointer-events: auto;
+    z-index: 5;
     .ext_btn {
         position: absolute;
         top: 15px;
@@ -23,6 +24,11 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;    
+        text-align: center;
+        .score {
+            display: flex;
+            justify-content: center;
+        }
     }
     h2 {
         text-align: center;

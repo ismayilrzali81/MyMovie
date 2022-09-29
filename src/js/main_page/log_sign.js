@@ -4,7 +4,7 @@ export const log_sign = () => {
     sign_up_wrapper = document.querySelector('.sign_up_wrapper') ,
     log_in_wrapper = document.querySelector('.log_in_wrapper') ,
     exit_btn = document.querySelector('.ext_btn') ,
-    sign_up_menu_btn = document.querySelector('.nav_item .sign_in_btn')
+    sign_up_menu_btn = document.querySelector('.menu .sign_in_btn')
 
     toggle_btns.forEach((item , index) => {
         item.addEventListener('click' ,  () => {
@@ -31,6 +31,7 @@ export const log_sign = () => {
 
     sign_up_menu_btn.addEventListener('click' , () => {
         document.querySelector('.reg_wrapper').classList.add('active_reg')
+        document.querySelector('.menu').classList.toggle('menu_active')
         import('./index').then(res => res.log_in_sign_up())
     })
 }
