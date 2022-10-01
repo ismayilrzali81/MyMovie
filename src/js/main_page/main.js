@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded' , () => {
     // sliders()
     // favorite_btn('https://imdb-api.com/en/API/MostPopularMovies/k_7xs694cx')
     // see_more_section('https://imdb-api.com/en/API/MostPopularMovies/k_7xs694cx' , '.see_more_section .movie_full' , 'https://imdb-api.com/en/API/ComingSoon/k_7xs694cx')
+    import('./index').then(res => res.log_in_sign_up())
 
 })
 window.addEventListener('load' , () => {

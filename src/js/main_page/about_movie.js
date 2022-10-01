@@ -52,15 +52,13 @@ export const getMoviesInfo = (target , about_movie) => {
                     <div class="text_header">Overview</div>
                     <div class="text">${res.data.Plot}</div>
                     <div class="director_writer">  
-                            ${director_list}
-                            ${writers_list}
                     </div>
                     <div class="line"></div>
                     <div class="actors">
                         <div class="left_btn"></div>
                         <div class="right_btn"></div>
                         <div class="actors_list">
-                        <div class="actors_wrapper" data-position=0>${actors_lists}</div> 
+                        <div class="actors_wrapper" data-position=0></div> 
                         </div>             
                     </div>
                 </div>
@@ -70,6 +68,21 @@ export const getMoviesInfo = (target , about_movie) => {
                     </svg>
                 </div>
             <div/>`
+
+             director_list.forEach(item => {
+                about_movie.querySelector('.director_writer').innerHTML+= item
+             }) 
+             writers_list.forEach(item => {
+                about_movie.querySelector('.director_writer').innerHTML+= item
+             }) 
+
+             actors_lists.forEach(item => {
+                about_movie.querySelector('.actors_wrapper').innerHTML+= item
+             }) 
+
+
+
+
 
             about_movie.classList.add('about_movie_active')
          })

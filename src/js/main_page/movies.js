@@ -1,8 +1,6 @@
 import axios from "axios"
 
 export const most_popular = async (url_1 , place_1 , favorite = true , min = false , response) => {
-    // axios.get(url_1).then(async (response) => {
-        console.log(response);
         const movies = document.querySelector(`${place_1}`)
                     main:for(let index in response.data.items) {
                         let currentMovie = response.data.items[index]
@@ -28,31 +26,8 @@ export const most_popular = async (url_1 , place_1 , favorite = true , min = fal
                             break main
                         }
                     }
-            // })
 }
               
-            //    main: response.data.items.forEach(async currentMovie => /* for(let currentMovie of response.data.items ) */ {  
-                //     let res = await axios.get(`http://www.omdbapi.com/?apikey=8d9cfe3d&i=${currentMovie.id}`)
-                //     if(res.data.imdbRating == 'N/A' || res.data.imdbRating == undefined) {
-                //         return
-                //     }
-                //     movies.innerHTML += 
-                //                         `<div class="movie_list_item" data-id="${res.data.imdbID}">
-                //                             <div class="photo_wrapper">
-                //                                 <img src='${res.data.Poster}' loading="lazy" alt="movie photo">
-                //                                ${favorite ?  `<div class="favorite_toggle_btn"></div>` : ''}
-                //                             </div>
-                            
-                //                             <div class="year">${res.data.Year}</div>
-                //                             <div class="title">${res.data.Title}</div>
-                //                             <div class="score">
-                //                                 <div class="imdb_score"> <img  class="imdb" alt="imdb">${(res.data.imdbRating != 'N/A' && res.data.imdbRating) ? res.data.imdbRating : 0 }/ 10</div>
-                //                             </div>
-                //                             <div class="genre">${res.data.Genre}</div>
-                //                         </div>`
-                // }) 
-//     })
-// }
 
 export const new_arrival = (url_2 , place_2) => {
     axios.get(url_2).then((response) => {

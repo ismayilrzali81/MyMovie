@@ -242,6 +242,10 @@
     }
 
     .see_more_section {
+        .movie_full {
+            flex-direction: column;
+            align-content: center;
+        }
         .movie_list_item {
             margin-right: auto;
         }
@@ -251,5 +255,58 @@
     }
     section .list_wrapper {
         margin-top: 0px;
+    }
+
+    .reg_wrapper .sign_log_wrapper {
+        padding: 10px 30px;
+        width: 80%;
+        max-height: 550px;
+        min-height: auto;
+        .sign_up_wrapper .title, .reg_wrapper .sign_log_wrapper .log_in_wrapper .title {
+            font-size: 20px;
+        }
+
+        .sign_up_wrapper .social_auth_btns, .reg_wrapper .sign_log_wrapper .log_in_wrapper .social_auth_btns {
+            margin-top: 20px;
+            .social_btn {
+                font-size: 10px;
+                height: 40px;
+            }
+            .social_icon {
+                margin-right: 10px;
+            }
+        }
+
+        .sign_up_wrapper .line, .reg_wrapper .sign_log_wrapper .log_in_wrapper .line { 
+            margin-top: 20px;
+            .text {
+                font-size: 14px;
+            }
+        }
+        .sign_up_wrapper .sign_up_form, .reg_wrapper .sign_log_wrapper .sign_up_wrapper .log_in_form, .reg_wrapper .sign_log_wrapper .log_in_wrapper .sign_up_form, .reg_wrapper .sign_log_wrapper .log_in_wrapper .log_in_form {
+            margin-top: 10px;
+        }
+        .sign_up_wrapper .sign_up_form div label, .reg_wrapper .sign_log_wrapper .sign_up_wrapper .log_in_form div label, .reg_wrapper .sign_log_wrapper .log_in_wrapper .sign_up_form div label, .reg_wrapper .sign_log_wrapper .log_in_wrapper .log_in_form div label {
+            font-size: 13px;
+        }
+
+        .sign_up_wrapper .sign_up_form input, .reg_wrapper .sign_log_wrapper .sign_up_wrapper .log_in_form input, .reg_wrapper .sign_log_wrapper .log_in_wrapper .sign_up_form input, .reg_wrapper .sign_log_wrapper .log_in_wrapper .log_in_form input {
+            height: 40px;
+        }
+
+        .sign_up_wrapper .sign_up_form button, .reg_wrapper .sign_log_wrapper .sign_up_wrapper .log_in_form button, .reg_wrapper .sign_log_wrapper .log_in_wrapper .sign_up_form button, .reg_wrapper .sign_log_wrapper .log_in_wrapper .log_in_form button {
+            height: 50px;
+        }
+        
+        .toggle_btn_wrapper {
+            height: 40px;
+            .btn {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .reg_wrapper .sign_log_wrapper .sign_up_wrapper, .reg_wrapper .sign_log_wrapper .log_in_wrapper {
+        padding: 5px 0px 0px;
     }
 }
