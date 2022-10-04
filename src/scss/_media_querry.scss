@@ -318,4 +318,8 @@
     .section .movie_list {
         overflow-x: scroll;
     }
+    .movie_list_item .photo_wrapper .favorite_toggle_btn { 
+        width: 40px;
+        height: 40px;
+    }
 }
