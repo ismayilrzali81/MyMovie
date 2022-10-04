@@ -91,7 +91,7 @@ export const getMoviesInfo = (target , about_movie) => {
             if(e.target.classList.contains('ext_btn') || e.target.tagName == 'svg' || e.target.tagName == 'path' ) {
                     about_movie.classList.remove('about_movie_active')
             } if(e.target.classList.value == 'tag trailer') {
-                    const res_1 = await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_uy3lv974/${e.target.dataset.id}`)
+                    const res_1 = await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_7xs694cx/${e.target.dataset.id}`)
                       if(document.querySelector('#player')) {
                           document.querySelector('#player').remove() 
                           let player = document.createElement('div')

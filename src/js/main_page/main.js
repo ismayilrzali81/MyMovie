@@ -32,14 +32,16 @@ window.addEventListener('load' , () => {
  
      import('firebase/auth').then(({ getAuth, onAuthStateChanged }) => {
              let auth = getAuth()
+
+            const featured_movie_list = document.querySelector('section.featured_movie .movie_list') ,
+             featured_movie = document.querySelector('.featured_movie')
+
              onAuthStateChanged( auth , function(user) {
                  if (user) {
                   import('firebase/database').then(({ child, get, getDatabase, ref}) => {
-                     const db = getDatabase() ,
-                     featured_movie_list = document.querySelector('section.featured_movie .movie_list') ,
-                     featured_movie = document.querySelector('.featured_movie')
-             
-                     featured_movie.style.display = 'none' 
+                     const db = getDatabase() 
+                    //  featured_movie_list = document.querySelector('section.featured_movie .movie_list') ,
+                    //  featured_movie = document.querySelector('.featured_movie')
              
                      get(child(ref(db) , 'favorite/' + user.uid)).then(res => { 
                          if(res.val()) {
@@ -76,8 +78,9 @@ window.addEventListener('load' , () => {
                          } 
                      }) 
                  })
-                 } else {
-                 alert('')
+                 } else {   
+                    featured_movie_list.innerHTML = ''
+                    featured_movie.style.display = 'none' 
                  }
              });
  })

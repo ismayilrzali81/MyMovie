@@ -63,6 +63,7 @@ export const favorite_btn = (url_1) => {
                         console.log(movies_info);
                         featured_movie.style.display == 'none' ?     featured_movie.style.display = 'block' :  null 
                     } else {
+                        debugger
                         alert('you are not logged in.')
                     }
                 }  else if(target.classList.contains('favorite_toggle_btn_favorite')) {

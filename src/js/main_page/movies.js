@@ -165,7 +165,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
         for(let i = 0 ; i < 5 ; i++) {
             let randomMovie = response.data.items[i]
 
-            const data = await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_7q3vomr1/${randomMovie.id}`)
+            const data = await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_7xs694cx/${randomMovie.id}`)
             let res = await axios.get(`http://www.omdbapi.com/?apikey=8d9cfe3d&i=${randomMovie.id}`) ,
             poster = await  (await axios.get(`https://www.myapifilms.com/imdb/idIMDB?idIMDB=${randomMovie.id}&token=f183f32a-f21f-435a-81ca-2778aad3a1fe`)).data.data.movies[0].urlPoster
 

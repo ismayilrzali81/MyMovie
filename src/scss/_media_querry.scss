@@ -237,8 +237,8 @@
     }
 
     .video_wrapper iframe {
-        width: 65%;
-        height: 50%;
+        width: 75%;
+        height: 25%;
     }
 
     .see_more_section {
@@ -283,10 +283,12 @@
                 font-size: 14px;
             }
         }
+
+
         .sign_up_wrapper .sign_up_form,   .sign_up_wrapper .log_in_form,  .log_in_wrapper .sign_up_form,   .log_in_wrapper .log_in_form {
             margin-top: 10px;
         }
-        .sign_up_wrapper .sign_up_form div label,  .sign_up_wrapper .log_in_form div label,   .log_in_wrapper .sign_up_form div label, .reg_wrapper  .log_in_wrapper .log_in_form div label {
+        .sign_up_wrapper .sign_up_form div label,  .sign_up_wrapper .log_in_form div label,   .log_in_wrapper .sign_up_form div label,   .log_in_wrapper .log_in_form div label {
             font-size: 13px;
         }
 
@@ -294,7 +296,7 @@
             height: 40px;
         }
 
-        .sign_up_wrapper .sign_up_form button, .reg_wrapper  .sign_up_wrapper .log_in_form button, .reg_wrapper  .log_in_wrapper .sign_up_form button,   .log_in_wrapper .log_in_form button {
+        .sign_up_wrapper .sign_up_form button,   .sign_up_wrapper .log_in_form button,   .log_in_wrapper .sign_up_form button,   .log_in_wrapper .log_in_form button {
             height: 50px;
         }
         
@@ -308,5 +310,12 @@
 
     .reg_wrapper .sign_log_wrapper .sign_up_wrapper, .reg_wrapper .sign_log_wrapper .log_in_wrapper {
         padding: 5px 0px 0px;
+    }
+
+    .about_movie .movie_wrapper .info_wrapper {
+        width: 90%;
+    }
+    .section .movie_list {
+        overflow-x: scroll;
     }
 }
