@@ -51,14 +51,14 @@ export const favorite_btn = (url_1) => {
         if(index != 0 && index != 4) {
             item.addEventListener('click' , async (e) => {
                 let target = e.target
-                let user_id = auth.currentUser.uid
 
                 if(target.classList.contains('favorite_toggle_btn') && !target.classList.contains('favorite_toggle_btn_favorite')) {
                     if(auth.currentUser) {
-                        const getInfo = (await get(ref(db , 'favorite/' + user_id))).val()
+
+                        const getInfo = (await get(ref(db , 'favorite/' + auth.currentUser.uid))).val()
                         movies_info = getInfo ?  getInfo.movies_info : []
                         movies_info.push({id:target.parentElement.parentElement.getAttribute('data-id') , clazz:true})
-                        update(ref(db , 'favorite/' + user_id) , {movies_info})
+                        update(ref(db , 'favorite/' + auth.currentUser.uid) , {movies_info})
                         target.classList.add('favorite_toggle_btn_favorite')
                         console.log(movies_info);
                         featured_movie.style.display == 'none' ?     featured_movie.style.display = 'block' :  null 
@@ -67,7 +67,7 @@ export const favorite_btn = (url_1) => {
                         alert('you are not logged in.')
                     }
                 }  else if(target.classList.contains('favorite_toggle_btn_favorite')) {
-                    const getInfo = (await get(ref(db , 'favorite/' + user_id))).val()
+                    const getInfo = (await get(ref(db , 'favorite/' + auth.currentUser.uid))).val()
                     movies_info = getInfo ?  getInfo.movies_info : []
 
                     if(movies_info.length > 1) {
@@ -87,7 +87,7 @@ export const favorite_btn = (url_1) => {
                     }
 
                     target.classList.remove('favorite_toggle_btn_favorite')
-                    update(ref(db , 'favorite/' + user_id) , {movies_info})
+                    update(ref(db , 'favorite/' + auth.currentUser.uid) , {movies_info})
                 }
                     if(target.classList.contains('favorite_toggle_btn')) {
                         if(movies_info.length > 0) {
