@@ -315,7 +315,7 @@
     .about_movie .movie_wrapper .info_wrapper {
         width: 90%;
     }
-    .section .movie_list {
+    section .movie_list {
         overflow-x: scroll;
     }
     .movie_list_item .photo_wrapper .favorite_toggle_btn { 
@@ -323,7 +323,7 @@
         height: 40px;
     }
 
-    .left_btn , .right-btn {
+    .left_btn , .right_btn {
         display: none;
     }
 }
