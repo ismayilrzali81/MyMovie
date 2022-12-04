@@ -50,7 +50,7 @@ export const search_btn = () => {
                 if(item.Poster == 'N/A') return
                 content.innerHTML+= `
                 <div class="movie_list_item" data-id=${item.imdbID}>
-                    <div class="photo_wrapper"><img loading='lazy' src=${item.Poster}  alt="image"></div>
+                    <div class="photo_wrapper"><img loading='lazy' src=${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + item.Poster.slice(0 , -3) + 'webp'}  alt="image"></div>
                     <div class="movie_info">
                         <div class="movie_title">${item.Title}</div>
                         <div class="year">${item.Year}</div>

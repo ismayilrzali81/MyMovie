@@ -12,7 +12,7 @@ export const getMoviesInfo = (target , about_movie) => {
                    let actors_lists =  actors_res.data.actors.map(item => {
                          return `<div class="actor">
                          <div class="actor_photo">
-                         <img loading='lazy' src="${item.image}"  alt="mini_poster">
+                         <img loading='lazy' src="${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + item.image.slice(0 , -3) + 'webp'}"  alt="mini_poster">
                          </div>
                          <div class="actor_name">${item.name}</div>
                          <div class="actor_character">${item.asCharacter}</div>
@@ -36,7 +36,7 @@ export const getMoviesInfo = (target , about_movie) => {
             about_movie.innerHTML = `
             <div class="movie_wrapper">
                 <div class="photo_wrapper">
-                    <img loading='lazy' src="${res.data.Poster}"  alt="poster">                        
+                    <img loading='lazy' src="${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + res.data.Poster.slice(0 , -3) + 'webp' }"  alt="poster">                        
                 </div>
 
                 <div class="info_wrapper">

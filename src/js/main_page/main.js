@@ -63,7 +63,7 @@ window.addEventListener('load' , () => {
                                  featured_movie_list.innerHTML += 
                                              `<div class="movie_list_item" data-id="${item_1.id}">
                                                  <div class="photo_wrapper">
-                                                     <img loading='lazy' src='${data.data.Poster}' alt="movie photo">
+                                                     <img loading='lazy' src='${ 'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + data.data.Poster.slice(0 , -3) + 'webp' }' alt="movie photo">
                                                      <div class='${currentClass}'></div>
                                                  </div>
                                  

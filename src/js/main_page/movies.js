@@ -13,7 +13,7 @@ export const most_popular = async (url_1 , place_1 , favorite = true , min = fal
                         movies.innerHTML += 
                                             `<div class="movie_list_item" data-id="${res.data.imdbID}">
                                                 <div class="photo_wrapper">
-                                                    <img src='${res.data.Poster}' loading="lazy" alt="movie photo">
+                                                    <img src='${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/'  +  res.data.Poster.slice(0 , -3) + 'webp'}' loading="lazy" alt="movie photo">
                                                    ${favorite ?  `<div class="favorite_toggle_btn"></div>` : ''}
                                                 </div>
                                 
@@ -42,7 +42,7 @@ export const new_arrival = (url_2 , place_2) => {
         movies.innerHTML += 
                             `<div class="movie_list_item" data-id="${res.data.imdbID}">
                                 <div class="photo_wrapper">
-                                    <img src='${res.data.Poster}' loading="lazy" alt="movie photo">
+                                    <img src='${ 'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + res.data.Poster.slice(0 , -3) + 'webp' }' loading="lazy" alt="movie photo">
                                     <div class="favorite_toggle_btn"></div>
                                 </div>
                 
@@ -64,7 +64,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
 // // // most popular
    most_popular(url_1 , place_1 , true , true , response) 
 
-// // // // //     // new Arrival
+// // // //     // new Arrival
      new_arrival(url_2 , place_2)
 
  
@@ -85,7 +85,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
                     movies.innerHTML += 
                     `<div class="movie_list_item" data-index=${i} >
                     <div class="photo_wrapper">
-                        <img  alt="movie photo" loading="lazy" src="${data.data.thumbnailUrl}">
+                        <img  alt="movie photo" loading="lazy" src="${ 'https://res.cloudinary.com/dfohwxch2/image/fetch/w_450,h_250,q_80,f_auto/' +  data.data.thumbnailUrl.slice(0 , -3) + 'webp'}">
                     </div>
                     <div class="title">${data.data.fullTitle} Trailer </div>
                     </div>`
@@ -174,7 +174,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
                 movies_info.push({
                     title:randomMovie.title ,
                     imdbRatings: (res.data.imdbRating && res.data.imdbRating !== 'N/A' ) ? res.data.imdbRating : 0 ,
-                    poster: poster ,
+                    poster: poster.slice(0 , -3) + 'webp' ,
                     video: data.data.videoId ,
                     content: res.data.Plot
 
@@ -189,7 +189,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
         document.querySelectorAll('.movie_toggle li').forEach((item , index) => {
             item.addEventListener('click' , () => {
                 
-                document.querySelector('.header_wrapper').style.cssText = `background: url(${movies_info[index].poster}) 
+                document.querySelector('.header_wrapper').style.cssText = `background: url(${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + movies_info[index].poster}) 
                 center 35% /cover no-repeat`
 
                 if(document.querySelector('iframe#player')) {
