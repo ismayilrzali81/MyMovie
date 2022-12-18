@@ -75,7 +75,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
         for(let i = 0 ; i < 5  ; i++) {
             let randomMovie = response.data.items[i]
 
-            const data = await axios.get(`https://imdb-api.com/en/API/Trailer/k_7xs694cx/${randomMovie.id}`)
+            const data =  await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_7xs694cx/${randomMovie.id}`)
 
                 movies_info.push({
                     videoId:data.data.videoId
