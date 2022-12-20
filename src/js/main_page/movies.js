@@ -62,94 +62,93 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
     response = await axios.get(url_1)
 
 // // // most popular
-   most_popular(url_1 , place_1 , true , true , response) 
+//    most_popular(url_1 , place_1 , true , true , response) 
 
-// // // //     // new Arrival
-     new_arrival(url_2 , place_2)
+// // // // //     // new Arrival
+//      new_arrival(url_2 , place_2)
 
  
 
 // // // // // // exclusive
-    let movies_info = []
-    const movies = document.querySelector(`${place_3} div.movie_list`)
-        for(let i = 0 ; i < 5  ; i++) {
-            let randomMovie = response.data.items[i]
+    // let movies_info = []
+    // const movies = document.querySelector(`${place_3} div.movie_list`)
+    //     for(let i = 0 ; i < 5  ; i++) {
+    //         let randomMovie = response.data.items[i]
 
-            const data =  await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_7xs694cx/${randomMovie.id}`)
+    //         const data =  await  axios.get(`https://imdb-api.com/en/API/Trailer/k_7xs694cx/${randomMovie.id}`)
+    //         const trailer = await  axios.get(`https://imdb-api.com/en/API/YouTubeTrailer/k_g3lkuf9h/${randomMovie.id}`)
+    //             movies_info.push({
+    //                 videoId:trailer.data.videoId
+    //             }) 
+    //             if(data.data.thumbnailUrl) {
+    //                 movies.innerHTML += 
+    //                 `<div class="movie_list_item" data-index=${i} >
+    //                 <div class="photo_wrapper">
+    //                     <img  alt="movie photo" loading="lazy" src="${ 'https://res.cloudinary.com/dfohwxch2/image/fetch/w_450,h_250,q_80,f_auto/' +  data.data.thumbnailUrl.slice(0 , -3) + 'webp'}">
+    //                 </div>
+    //                 <div class="title">${data.data.fullTitle} Trailer </div>
+    //                 </div>`
+    //             } else {
+    //                 continue;
+    //             }
+    //         }
 
-                movies_info.push({
-                    videoId:data.data.videoId
-                }) 
-                
-                if(data.data.thumbnailUrl) {
-                    movies.innerHTML += 
-                    `<div class="movie_list_item" data-index=${i} >
-                    <div class="photo_wrapper">
-                        <img  alt="movie photo" loading="lazy" src="${ 'https://res.cloudinary.com/dfohwxch2/image/fetch/w_450,h_250,q_80,f_auto/' +  data.data.thumbnailUrl.slice(0 , -3) + 'webp'}">
-                    </div>
-                    <div class="title">${data.data.fullTitle} Trailer </div>
-                    </div>`
-                } else {
-                    continue;
-                }
-            }
-
-        document.querySelector(place_3).addEventListener('click' , (e) => {
-            let target = e.target
+    //     document.querySelector(place_3).addEventListener('click' , (e) => {
+    //         let target = e.target
             
-                if(target.classList.contains('movie_list_item'))  {
-                        document.querySelector('.video_wrapper').classList.toggle('active')
+    //             if(target.classList.contains('movie_list_item'))  {
+    //                     document.querySelector('.video_wrapper').classList.toggle('active')
 
-                            if(document.querySelector('#player')) {
-                            document.querySelector('#player').remove() 
-                            let player = document.createElement('div')
-                            player.id = 'player'
-                            document.querySelector('.video_wrapper').append(player)
-                        }
+    //                         if(document.querySelector('#player')) {
+    //                         document.querySelector('#player').remove() 
+    //                         let player = document.createElement('div')
+    //                         player.id = 'player'
+    //                         document.querySelector('.video_wrapper').append(player)
+    //                     }
 
-                        new YT.Player('player', {
-                            height: '360',
-                            width: '640',
-                            videoId: movies_info[target.dataset.index].videoId
-                            });
-                }
+    //                     new YT.Player('player', {
+    //                         height: '360',
+    //                         width: '640',
+    //                         videoId: movies_info[target.dataset.index].videoId
+    //                         });
+    //             }
                 
-                if(target.parentElement.classList.contains('movie_list_item')) {
-                        document.querySelector('.video_wrapper').classList.toggle('active')
+    //             if(target.parentElement.classList.contains('movie_list_item')) {
+    //                     document.querySelector('.video_wrapper').classList.toggle('active')
 
-                        if(document.querySelector('#player')) {
-                            document.querySelector('#player').remove() 
-                            let player = document.createElement('div')
-                            player.id = 'player'
-                            document.querySelector('.video_wrapper').append(player)
-                        }
+    //                     if(document.querySelector('#player')) {
+    //                         document.querySelector('#player').remove() 
+    //                         let player = document.createElement('div')
+    //                         player.id = 'player'
+    //                         document.querySelector('.video_wrapper').append(player)
+    //                     }
 
-                            new YT.Player('player', {
-                            height: '360',
-                            width: '640',
-                            videoId: movies_info[target.parentElement.dataset.index].videoId
-                            });
-                }
+    //                         new YT.Player('player', {
+    //                         height: '360',
+    //                         width: '640',
+    //                         videoId: movies_info[target.parentElement.dataset.index].videoId
+    //                         });
+    //             }
                 
-                if(target.parentElement.parentElement.classList.contains('movie_list_item') && !(target.classList.contains('favorite_toggle_btn'))) {
-                        document.querySelector('.video_wrapper').classList.toggle('active')
+    //             if(target.parentElement.parentElement.classList.contains('movie_list_item') && !(target.classList.contains('favorite_toggle_btn'))) {
+    //                     document.querySelector('.video_wrapper').classList.toggle('active')
 
 
 
-                            if(document.querySelector('#player')) {
-                            document.querySelector('#player').remove() 
-                            let player = document.createElement('div')
-                            player.id = 'player'
-                            document.querySelector('.video_wrapper').append(player)
-                        }
+    //                         if(document.querySelector('#player')) {
+    //                         document.querySelector('#player').remove() 
+    //                         let player = document.createElement('div')
+    //                         player.id = 'player'
+    //                         document.querySelector('.video_wrapper').append(player)
+    //                     }
 
-                        new YT.Player('player', {
-                            height: '360',
-                            width: '640',
-                            videoId: movies_info[target.parentElement.parentElement.dataset.index].videoId
-                            });
-                }
-        })        
+    //                     new YT.Player('player', {
+    //                         height: '360',
+    //                         width: '640',
+    //                         videoId: movies_info[target.parentElement.parentElement.dataset.index].videoId
+    //                         });
+    //             }
+    //     })        
 
 
        
@@ -174,7 +173,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
                 movies_info.push({
                     title:randomMovie.title ,
                     imdbRatings: (res.data.imdbRating && res.data.imdbRating !== 'N/A' ) ? res.data.imdbRating : 0 ,
-                    poster: poster.slice(0 , -3) + 'webp' ,
+                    poster: 'https://res.cloudinary.com/dfohwxch2/image/fetch/q_80,f_auto/' + poster.slice(0 , -3) + 'webp' ,
                     video: data.data.videoId ,
                     content: res.data.Plot
 
@@ -189,7 +188,7 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
         document.querySelectorAll('.movie_toggle li').forEach((item , index) => {
             item.addEventListener('click' , () => {
                 
-                document.querySelector('.header_wrapper').style.cssText = `background: url(${'https://res.cloudinary.com/dfohwxch2//image/fetch/q_80,f_auto/' + movies_info[index].poster}) 
+                document.querySelector('.header_wrapper').style.cssText = `background: url(${'https://res.cloudinary.com/dfohwxch2/image/fetch/q_80,f_auto/' + movies_info[index].poster}) 
                 center 35% /cover no-repeat`
 
                 if(document.querySelector('iframe#player')) {
@@ -229,5 +228,12 @@ export const movies = async (url_1 , place_1 , url_2 , place_2 , place_3 , place
         </div>`
 
         document.querySelector('.header_wrapper').style.cssText = `background: url(${movies_info[2].poster}) center 35% /cover no-repeat`
+
+        
+        new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: `${movies_info[2].video}`
+            });
     })
 }
